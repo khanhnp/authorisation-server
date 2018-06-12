@@ -15,23 +15,6 @@ import org.springframework.security.oauth2.provider.token.TokenStore;
 @Configuration
 @EnableResourceServer
 public class OAuth2ResourceServerConfig extends ResourceServerConfigurerAdapter {
-    private static final String RESOURCE_ID = "auth_serv";
-
-    @Autowired
-    private TokenStore tokenStore;
-
-    @Autowired
-    private SecuritySettings securitySettings;
-
-    @Override
-    public void configure(ResourceServerSecurityConfigurer resources) {
-        resources
-                .resourceId(RESOURCE_ID)
-                .tokenStore(tokenStore);
-        // can set a new token extractor
-        // or set a new authentication manager to verify the token
-    }
-
     /**
      * security configurer.
      *

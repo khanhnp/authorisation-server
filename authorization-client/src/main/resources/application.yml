@@ -1,0 +1,24 @@
+server:
+  port: 8083
+
+spring:
+  datasource:
+    url: jdbc:postgresql://localhost:5432/postgres
+    driver-class-name: org.postgresql.Driver
+    username: postgres
+    password: '12345!Fra'
+  jpa:
+    properties:
+      hibernate:
+      temp:
+        use_jdbc_metadata_defaults: false
+
+security:
+  keyStore:
+    location: classpath:keystore.jks
+    alias: mytest
+    keypass: mypass
+    storepass: mypass
+  authserver-scopename-all-access: auth_all
+  encoding-strength: 10
+  security-realm: Spring Boot JWT Example Realm

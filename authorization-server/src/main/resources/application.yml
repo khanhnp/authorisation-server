@@ -20,3 +20,5 @@ security:
     keypass: mypass
     storepass: mypass
   authserver-scopename-all-access: auth_all
+  encoding-strength: 10
+  security-realm: Spring Boot JWT Example Realm

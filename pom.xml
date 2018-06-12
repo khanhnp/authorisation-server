@@ -6,7 +6,12 @@
 	<groupId>com.spsvn.authorisation</groupId>
 	<artifactId>authorisation-server</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
-	<packaging>jar</packaging>
+	<modules>
+		<module>authorization-configuration</module>
+		<module>authorization-server</module>
+		<module>authorization-client</module>
+	</modules>
+	<packaging>pom</packaging>
 
 	<name>authorisation-server</name>
 	<description>Demo project for Spring Boot</description>
