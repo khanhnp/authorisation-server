@@ -5,6 +5,7 @@ import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.security.authentication.AuthenticationManager;
 import org.springframework.security.crypto.password.PasswordEncoder;
+import org.springframework.security.oauth2.client.OAuth2ClientContext;
 import org.springframework.security.oauth2.config.annotation.builders.JdbcClientDetailsServiceBuilder;
 import org.springframework.security.oauth2.config.annotation.web.configuration.AuthorizationServerConfigurerAdapter;
 import org.springframework.security.oauth2.config.annotation.web.configuration.EnableAuthorizationServer;
@@ -37,6 +38,9 @@ public class OAuth2AuthorizationServerConfig extends AuthorizationServerConfigur
 
     @Autowired
     private PasswordEncoder passwordEncoder;
+
+    @Autowired
+    OAuth2ClientContext oauth2ClientContext;
 
     @Override
     public void configure(AuthorizationServerEndpointsConfigurer endpoints) throws Exception {

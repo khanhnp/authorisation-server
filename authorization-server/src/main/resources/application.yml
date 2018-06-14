@@ -1,5 +1,5 @@
 server:
-  port: 8081
+  port: 8080
 
 spring:
   datasource:
@@ -22,3 +22,17 @@ security:
   authserver-scopename-all-access: auth_all
   encoding-strength: 10
   security-realm: Spring Boot JWT Example Realm
+
+github:
+  client:
+    clientId: bd1c0a783ccdd1c9b9e4
+    clientSecret: 1a9030fbca47a5b2c28e92f19050bb77824b5ad1
+    accessTokenUri: https://github.com/login/oauth/access_token
+    userAuthorizationUri: https://github.com/login/oauth/authorize
+    clientAuthenticationScheme: form
+  resource:
+    userInfoUri: https://api.github.com/user
+
+logging:
+  level:
+    org.springframework.security: DEBUG
